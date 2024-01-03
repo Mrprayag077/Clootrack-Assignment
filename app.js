@@ -1,3 +1,7 @@
+// RESULTS: EXTRACTED DATA FROM MAGICPIN || STORED DATA TO MONGODB-ATLAS || AS PER DISHNAME
+// https://github.com/Mrprayag077/Clootrack-Assignment
+
+
 const puppeteer = require('puppeteer');
 const mongoose = require('mongoose');
 const dotenv = require("dotenv");
