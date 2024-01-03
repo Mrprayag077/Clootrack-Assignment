@@ -1,0 +1,30 @@
+const puppeteer = require('puppeteer');
+
+
+(async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto('https://magicpin.in/New-Delhi/Paharganj/Restaurant/Eatfit/store/61a193/delivery/');
+
+    const categories = await page.$$eval('.categoryListing', (categoryElements) => {
+        return categoryElements.map((categoryElement) => {
+            const categoryName = categoryElement.querySelector('.categoryHeading').textContent.trim();
+            const menuItems = Array.from(categoryElement.querySelectorAll('.itemInfo')).map((itemInfoElement) => {
+                const dishName = itemInfoElement.querySelector('.itemName a').textContent.trim();
+                const price = itemInfoElement.querySelector('.itemPrice').textContent.trim();
+                return { dishName, price };
+            });
+
+            return { categoryName, menuItems };
+        });
+    });
+
+    console.log(categories);
+    console.log("--------------------------------");
+    console.log(categories[0].menuItems[0]);
+    console.log(categories[0].menuItems[1]);
+    console.log(categories[0].menuItems[2]);
+
+
+    await browser.close();
+})();
