@@ -14,9 +14,9 @@
 ![App Screenshot](./RESULTS/assignment-1-mongodb.png)
  -->
 
-<img src="./RESULTS/assignmnet-1.png" alt="App Screenshot" style="max-height: 500px; overflow-y: auto;">
+<img src="./RESULTS/assignmnet-1.png" alt="App Screenshot" style="max-height: 100px; overflow-y: auto;">
 
-<img src="./RESULTS/assignment-1-mongodb.png" alt="App Screenshot" style="max-height: 500px; overflow-y: auto;">
+<img src="./RESULTS/assignment-1-mongodb.png" alt="App Screenshot" style="max-height: 100px; overflow-y: auto;">
 
 
 ## Tech Stack
